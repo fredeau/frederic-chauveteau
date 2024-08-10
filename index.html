@@ -4,31 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Frédéric Chauveteau</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Aligne les éléments verticalement au centre */
+}
+
+nav ul li {
+    margin-right: 20px;
+    text-align: center; /* Centre le texte et l'image */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li a .icon {
+    display: block;
+    width: 50px; /* Taille des icônes */
+    height: 50px;
+    margin: 0 auto 5px auto; /* Centre l'image et ajoute un espace en bas */
+    object-fit: cover; /* Assure que l'image reste bien cadrée */
+}
+#projets {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#projets h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+}
+        section {
+            padding: 2em 10%;
+            margin-bottom: 2em;
+        }
+
+        #projets {
+            background-image: url('https://imgur.com/5q5cl4l.jpg'); /* Remplace par l'URL de ton image */
+            background-size: cover; /* Pour que l'image couvre tout l'espace */
+            background-position: center; /* Pour centrer l'image */
+            color: rgb(255, 255, 255);
+            padding: 3em 10%;
+        }
+
+        .projet-container {
+    display: flex; /* Utilise Flexbox pour disposer les projets en ligne */
+    justify-content: space-between; /* Espacement égal entre les projets */
+   
+    gap: 20px; /* Ajoute un espacement entre les projets */
+}
+
+/* Style des projets individuels */
+.projet-box {
+    background-size: cover; /* Assure que l'image de fond couvre tout le projet */
+    background-position: center; /* Centre l'image de fond */
+    width:calc(50% - 20px); /* Largeur des projets, ajustée pour deux projets côte à côte */
+    padding: 20px;
+    color: white; /* Couleur du texte */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Effet d'ombre pour délimiter les projets */
+    border-radius: 8px; /* Coins arrondis pour un effet plus élégant */
+}
+        .projet-box h3 {
+            margin-top: 0;
+        }
+
+        .projet-box p, .projet-box ul {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1em;
+            border-radius: 8px;
+            margin: 0;
+        }
+
+        .projet-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .projet-box ul li {
+            margin-bottom: 0.5em;
+        }
+
+       
+        /* Conteneur parent pour les sections A propos et Contactez-moi */
+        #section-container {
+            background-image: url('https://imgur.com/0BY3Yc4.jpg'); /* Image couvrant les deux sections */
+            background-size: cover;
+            background-position: center;
+            padding: 0;
+        }
+
+        #apropos, #contact {
+    background: transparent; /* Les sections sont transparentes pour laisser apparaître l'image du conteneur parent */
+    color: rgb(5, 5, 5);
+    padding: 3em 10%;
+    text-align: center;
+    margin: 0; /* Suppression des marges pour coller les sections l'une à l'autre */
+}
+
+/* Alignement et style du formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les champs horizontalement */
+    margin-top: 20px;
+}
+
+form label {
+    width: 100%; /* Labels à pleine largeur */
+    text-align: left;
+    color: rgb(3, 3, 3);
+    margin-bottom: 0.5em;
+}
+
+form input, form textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #1d1d1d;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    width: 80%; /* Largeur des champs ajustée */
+    max-width: 500px;
+}
+
+form textarea {
+    height: 100px;
+    resize: none; /* Désactive le redimensionnement manuel */
+}
+
+form button {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%; /* Largeur du bouton */
+    max-width: 300px;
+}
+
+        footer {
+            background: #333;
+            color: rgb(255, 246, 246);
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#apropos">
+                        <img src="https://imgur.com/iznhf6l.jpg" alt="Ma photo" class="icon"> <!-- Ta photo en petit format -->
+                        À propos
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <img src="https://imgur.com/FzvHO0P.png" alt="Icône mail" class="icon"> <!-- Icône mail -->
+                        Contact
+                    </a>
+                </li>
             </ul>
         </nav>
-        <h1>Bienvenue sur mon Portfolio</h1>
+        <h1>BIENVENUE SUR MON PORTFOLIO</h1>
     </header>
     
     <section id="projets">
-        <h2>Découvrez mes derniers travaux et projets</h2>
-        <div class="projet">
-            <div class="projet-box">
+        <h2>DECOUVREZ MES DERNIERS TRAVAUX ET PROJETS</h2>
+        <div class="projet-container">
+            <div class="projet-box" style="background-image: url('https://imgur.com/CMwVEJq.jpg');">
                 <h3>PROJET 1</h3>
                 <p>CONNAITRE LES BASES DU RÉSEAU</p>
                 <p>APPRENDRE LES BASES DE CISCO PACK TRACER</p>
             </div>
-            <div class="projet-box">
+            <div class="projet-box" style="background-image: url('https://imgur.com/mfSI4tr.jpg');">
                 <h3>PROJET 2</h3>
                 <p>CYBERSÉCURITÉ</p>
-                <ul>
+                
                     <li>Programmation pour les tâches de cybersécurité</li>
                     <li>Cadres et controles qui éclairent les opérations de sécurité</li>
                     <li>Configurer un serveur web sécurisé</li>
@@ -37,41 +219,45 @@
                     <li>Effectuer la capture et l'analyse des paquets</li>
                     <li>Analyse des failles de sécurité</li>
                     <li>Analyste de sécurité/li>
+                    <li>...</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="apropos">
-        <h2>A propos de moi</h2>
-        <p> Je m’appelle Frédéric Chauveteau et j’aime le monde du réseau et de la cybersécurité. Elle correspond à des valeurs, rendre services aux 
-         <br>Entreprises et respecter des règles pour sécuriser une entreprise(éthique). J’apprécie aussi l’informatique pour sa technique et ses 
-<br>compétences à acquérir durant sa carrière. Je suis entré dans ce monde par la petite porte en effectuant un stage dans une entreprise 
-<br>de réseau et maintenance. 
-                <br>Je pense que mes capacités pourront être un avantage dans une entreprise comme ma ténacité, ma gestion des priorité, mon esprit d’équipe et ma communication.  
-<br>C’est pourquoi je me forme à me préparer à mon futur emploi. 
-<br>J’ai effectué des formations en réseau tcp/ip, python via open Classroom, je prépare en ce moment même la certification de google cybersécurité afin d’avoir de bonnes bases dans ce milieu</p>
-    </section>
+    <!-- Conteneur parent avec une seule image de fond couvrant les deux sections -->
+    <div id="section-container">
+        <section id="apropos">
+            <h2>A propos de moi</h2>
+            <ul>
+            <p> Je m’appelle Frédéric Chauveteau et j’aime le monde du réseau et de la cybersécurité. Elle correspond à des valeurs, rendre services aux 
+            entreprises et respecter des règles pour sécuriser une entreprise(éthique).<br> J’apprécie aussi l’informatique pour sa technique et ses 
+       compétences à acquérir durant sa carrière. Je suis entré dans ce monde par la petite porte en effectuant un stage dans une entreprise 
+       de réseau et maintenance. 
+                       <br>Je pense que mes capacités pourront être un avantage dans une entreprise comme ma ténacité, ma gestion des priorité, mon esprit d’équipe et ma communication.  
+       C’est pourquoi je me forme à me préparer à mon futur emploi. 
+       <br>J’ai effectué des formations en réseau tcp/ip, python via open Classroom, je prépare en ce moment même la certification de google cybersécurité afin d’avoir de bonnes bases dans ce milieu</p>
+           </section>
 
-    <section id="contact">
-        <h2>Contactez-moi</h2>
-        <form>
-            <label for="name">Nom</label>
-            <input type="text" id="name" name="name">
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-            
-            <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
-            
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <form>
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2023 Mon Portfolio. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
-
